@@ -1,0 +1,73 @@
+﻿{
+  "OriginalDefinition": "A, B, C, D; H; ; 0,1; \nA,0 -> 1,L,B;\nA,1 -> 1,L,C;\nB,0 -> 1,R,A;\nC,0 -> 0,R,D;\nC,1 -> 0,R,A;\nD,0 -> 0,L,D;\nD,1 -> 0,R,C;\n",
+  "NonfinalStates": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "AcceptingState": "H",
+  "RefusingState": null,
+  "InitialState": "A",
+  "Sigma": [],
+  "Gamma": [
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "A",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "A",
+      "Read": "1",
+      "To": "C",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "0",
+      "To": "A",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "0",
+      "To": "D",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "1",
+      "To": "A",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "D",
+      "Read": "0",
+      "To": "D",
+      "Write": "0",
+      "Dir": "L"
+    },
+    {
+      "From": "D",
+      "Read": "1",
+      "To": "C",
+      "Write": "0",
+      "Dir": "R"
+    }
+  ],
+  "Info_Name": "Test03",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [],
+  "Info_Url": null,
+  "SuggestedMacroSize": null
+}

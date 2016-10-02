@@ -1,0 +1,83 @@
+﻿{
+  "OriginalDefinition": "A, B, C, D; H; ; 0,1; \nA,0 -> 1,L,B;\nA,1 -> 1,R,A;\nB,0 -> 1,R,A;\nB,1 -> 0,L,C;\nC,1 -> 1,L,D;\nD,0 -> 1,L,A;\nD,1 -> 1,R,A;\n /*\nStrange CTR:\n7+n~ 1^1+m+n'd+1 A>1 1^2'd-2 0 1^1+o'd+1\nFrom 9~ 1 A>1 1^2 0 1 to 16~ 1^2 A>1 0 1^2\n\nDoes not work currently!\n\nEdit: Works now.\n*/;",
+  "NonfinalStates": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "AcceptingState": "H",
+  "RefusingState": null,
+  "InitialState": "A",
+  "Sigma": [],
+  "Gamma": [
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "A",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "A",
+      "Read": "1",
+      "To": "A",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "B",
+      "Read": "0",
+      "To": "A",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "B",
+      "Read": "1",
+      "To": "C",
+      "Write": "0",
+      "Dir": "L"
+    },
+    {
+      "From": "C",
+      "Read": "1",
+      "To": "D",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "D",
+      "Read": "0",
+      "To": "A",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "D",
+      "Read": "1",
+      "To": "A",
+      "Write": "1",
+      "Dir": "R"
+    }
+  ],
+  "Info_Name": "Test04",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [
+    "",
+    "Strange CTR:",
+    "7+n~ 1^1+m+n'd+1 A>1 1^2'd-2 0 1^1+o'd+1",
+    "From 9~ 1 A>1 1^2 0 1 to 16~ 1^2 A>1 0 1^2",
+    "",
+    "Does not work currently!",
+    "",
+    "Edit: Works now.",
+    ""
+  ],
+  "Info_Url": null,
+  "SuggestedMacroSize": null
+}

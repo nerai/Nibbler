@@ -1,0 +1,68 @@
+﻿{
+  "OriginalDefinition": "A, B, C; H; ; 0,1; \nA,0 -> 1,R,B;\nA,1 -> 1,L,A;\nB,0 -> 1,L,A;\nB,1 -> 1,R,C;\nC,0 -> 1,R,H;\nC,1 -> 1,R,B;\n /*Simple Christmas tree from Machlin/Stout Complex Behaviour p.94 (last transition was repaired)\n*/;",
+  "NonfinalStates": [
+    "A",
+    "B",
+    "C"
+  ],
+  "AcceptingState": "H",
+  "RefusingState": null,
+  "InitialState": "A",
+  "Sigma": [],
+  "Gamma": [
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "A",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "A",
+      "Read": "1",
+      "To": "A",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "0",
+      "To": "A",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "1",
+      "To": "C",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "0",
+      "To": "H",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "1",
+      "To": "B",
+      "Write": "1",
+      "Dir": "R"
+    }
+  ],
+  "Info_Name": "SimpleChristmasTree",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [
+    "Simple Christmas tree from Machlin/Stout Complex Behaviour p.94 (last transition was repaired)",
+    ""
+  ],
+  "Info_Url": null,
+  "SuggestedMacroSize": null
+}

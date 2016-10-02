@@ -1,0 +1,55 @@
+﻿{
+  "OriginalDefinition": "A,B,C,D,E;H;;0,1; A,0 -> B,1,R; B,0 -> A,0,L; A,1 -> C,1,R; C,0 -> C,0,R;K=6;/*A machine used to test Packed Exponential Tape*/",
+  "NonfinalStates": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "AcceptingState": "H",
+  "RefusingState": null,
+  "InitialState": "A",
+  "Sigma": [],
+  "Gamma": [
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "A",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "A",
+      "Read": "1",
+      "To": "C",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "B",
+      "Read": "0",
+      "To": "A",
+      "Write": "0",
+      "Dir": "L"
+    },
+    {
+      "From": "C",
+      "Read": "0",
+      "To": "C",
+      "Write": "0",
+      "Dir": "R"
+    }
+  ],
+  "Info_Name": "TestPETape01",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [
+    "A machine used to test Packed Exponential Tape"
+  ],
+  "Info_Url": null,
+  "SuggestedMacroSize": 6
+}

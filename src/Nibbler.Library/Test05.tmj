@@ -1,0 +1,81 @@
+﻿{
+  "OriginalDefinition": "A, B, C, D; H; ; 0,1; \nA,0 -> 1,L,B;\nA,1 -> 0,L,C;\nB,0 -> 1,R,A;\nB,1 -> 0,L,D;\nC,1 -> 1,R,B;\nD,0 -> 1,L,B;\nD,1 -> 1,L,D;\n /*Difficult BB4 candidate\n\nCannot be solved currently\nRequires either proof-during-proof or proof with ignored ends, because the required proof was not done before entering the CTR section.\n\nEdit: Works\n*/;",
+  "NonfinalStates": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "AcceptingState": "H",
+  "RefusingState": null,
+  "InitialState": "A",
+  "Sigma": [],
+  "Gamma": [
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "A",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "A",
+      "Read": "1",
+      "To": "C",
+      "Write": "0",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "0",
+      "To": "A",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "B",
+      "Read": "1",
+      "To": "D",
+      "Write": "0",
+      "Dir": "L"
+    },
+    {
+      "From": "C",
+      "Read": "1",
+      "To": "B",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "D",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "D",
+      "Read": "1",
+      "To": "D",
+      "Write": "1",
+      "Dir": "L"
+    }
+  ],
+  "Info_Name": "Test05",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [
+    "Difficult BB4 candidate",
+    "",
+    "Cannot be solved currently",
+    "Requires either proof-during-proof or proof with ignored ends, because the required proof was not done before entering the CTR section.",
+    "",
+    "Edit: Works",
+    ""
+  ],
+  "Info_Url": null,
+  "SuggestedMacroSize": null
+}

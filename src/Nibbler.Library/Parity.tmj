@@ -1,0 +1,70 @@
+﻿{
+  "OriginalDefinition": "q0, q1;qa, qr;0, 1;_;q0,_ -> qr,_,S;q0,0 -> q0,0,R;q0,1 -> q1,1,R;q1,_ -> qa,_,S;q1,0 -> q1,0,R;q1,1 -> q0,1,R;/* Accept if odd number of 1s in input. */",
+  "NonfinalStates": [
+    "q0",
+    "q1"
+  ],
+  "AcceptingState": "qa",
+  "RefusingState": "qr",
+  "InitialState": "q0",
+  "Sigma": [
+    "0",
+    "1"
+  ],
+  "Gamma": [
+    "_",
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "q0",
+      "Read": "_",
+      "To": "qr",
+      "Write": "_",
+      "Dir": "S"
+    },
+    {
+      "From": "q0",
+      "Read": "0",
+      "To": "q0",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "q0",
+      "Read": "1",
+      "To": "q1",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "q1",
+      "Read": "_",
+      "To": "qa",
+      "Write": "_",
+      "Dir": "S"
+    },
+    {
+      "From": "q1",
+      "Read": "0",
+      "To": "q1",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "q1",
+      "Read": "1",
+      "To": "q0",
+      "Write": "1",
+      "Dir": "R"
+    }
+  ],
+  "Info_Name": "Parity",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [
+    " Accept if odd number of 1s in input. "
+  ],
+  "Info_Url": null,
+  "SuggestedMacroSize": null
+}

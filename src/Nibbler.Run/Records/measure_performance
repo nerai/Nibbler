@@ -1,0 +1,65 @@
+echo Measuring simulation speed...
+
+echo
+echo Warmup
+lib BusyBeaver2
+create silent nohist
+run
+
+echo
+echo BusyBeaver2
+lib BusyBeaver2
+create silent nohist
+stopwatch start
+run
+stopwatch stop
+
+echo
+echo BusyBeaver3
+lib BusyBeaver3
+create silent nohist
+stopwatch start
+run
+stopwatch stop
+
+echo
+echo BusyBeaver4
+lib BusyBeaver4
+create silent nohist
+stopwatch start
+run
+stopwatch stop
+
+echo
+echo BusyBeaver5_Mabu1
+lib BusyBeaver5_Mabu1
+create silent nohist
+stopwatch start
+run
+stopwatch stop
+
+echo
+echo BusyBeaver5_Mabu2
+lib BusyBeaver5_Mabu2
+create silent nohist
+stopwatch start
+run
+stopwatch stop
+
+echo
+echo BB6_1_Marxen_136612
+lib BB6_1_Marxen_136612
+create silent nohist
+stopwatch start
+run
+stopwatch stop
+
+echo
+echo BB6_2_Marxen_95524079
+lib BB6_2_Marxen_95524079
+create silent nohist
+stopwatch start
+run
+stopwatch stop
+
+echo
