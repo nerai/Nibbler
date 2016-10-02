@@ -1,9 +1,9 @@
-# nibbler
+# Nibbler
 An interactive Turing machine simulator and Busy Beaver calculator using exponential tapes and macro transitions
 
-Busy Beavers are n-state Turing machines which are started on an initially blank tape and produce a maximum number of symbols without entering an infinite loop. This number is called Σ(n) and is easily proved to be noncalculable. Nibbler aims to provide an easy-to-use framework for working with Busy Beavers.
+Busy Beavers are n-state Turing machines which are started on an initially blank tape and produce a maximum number of symbols without entering an infinite loop. This number is called Σ(n) and is easily proved to be noncalculable.
 
-Nibbler’s class libraries can be imported and used by any .NET-compatible program. For an even quicker start, it is recommended to use Nibbler’s interactive command prompt. Any command entered is executed immediately and the results are shown on the screen as well as logged to a file. For visual clarity, colored text is used in both screen and file output.
+Nibbler aims to provide an easy-to-use framework for working with Busy Beavers. Its class libraries can be imported and used by any .NET-compatible program. For an even quicker start, it is recommended to use Nibbler’s interactive command prompt. Any command entered is executed immediately and the results are shown on the screen as well as logged to a file. For visual clarity, colored text is used in both screen and file output.
 
 ## Output interpretation
 
