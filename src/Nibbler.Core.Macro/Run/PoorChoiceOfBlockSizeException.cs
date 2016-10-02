@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TuringBox.TM.Run
+namespace Nibbler.Core.Macro.Run
 {
 	public class PoorChoiceOfBlockSizeException : Exception
 	{

@@ -8,14 +8,14 @@ using ConsoleMenu;
 using ExampleMenu;
 using ExampleMenu.Examples;
 using ExampleMenu.Examples.Recording;
+using Nibbler.Core.Macro.Definition;
+using Nibbler.Core.Macro.Run;
+using Nibbler.Core.Macro.Tapes;
+using Nibbler.Core.Simple.Definition;
 using Nibbler.Core.Simple.Run;
-using TuringBox.Tapes;
-using TuringBox.TM;
-using TuringBox.TM.Run;
-using TuringBox.Utils;
 using Unlog;
 
-namespace TuringRunner
+namespace Nibbler.Run
 {
 	public class ControlledRun
 	{

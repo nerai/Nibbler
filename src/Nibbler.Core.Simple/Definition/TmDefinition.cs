@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Nibbler.Core.Simple.Definition;
 
-namespace TuringBox.TM
+namespace Nibbler.Core.Simple.Definition
 {
 	public class TmDefinition
 	{

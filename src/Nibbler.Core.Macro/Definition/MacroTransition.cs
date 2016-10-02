@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using Nibbler.Core.Macro.Tapes;
 using Nibbler.Core.Simple;
+using Nibbler.Core.Simple.Definition;
 using Nibbler.Core.Simple.Run;
-using TuringBox.Tapes;
-using TuringBox.TM;
-using TuringBox.TM.Run;
-using TuringBox.Utils;
-using Utils;
+using Nibbler.Core.Simple.Tapes;
+using Nibbler.Utils;
 
-namespace TuringBox.TM
+namespace Nibbler.Core.Macro.Definition
 {
 	public class MacroTransition
 	{

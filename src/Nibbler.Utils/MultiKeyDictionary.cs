@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Utils
+namespace Nibbler.Utils
 {
 	public class MultiKeyDictionary<TK1, TK2, TV> // todo : IDictionary<Tuple<TK1, TK2>, TV>
 	{

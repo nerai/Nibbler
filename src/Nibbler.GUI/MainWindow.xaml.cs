@@ -7,7 +7,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using ConsoleMenu;
-using TuringRunner;
+using Nibbler.Run;
 using Unlog;
 using Unlog.AdditionalTargets;
 

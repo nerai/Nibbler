@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TuringBox.TM
+namespace Nibbler.Core.Simple.Definition
 {
 	public class SimpleTransition
 	{
@@ -15,8 +15,10 @@ namespace TuringBox.TM
 
 		public SimpleTransition (State source, byte read, State q, byte o, short d)
 		{
-			if (source == null) throw new ArgumentNullException ();
-			if (q == null) throw new ArgumentNullException ();
+			if (source == null)
+				throw new ArgumentNullException ();
+			if (q == null)
+				throw new ArgumentNullException ();
 
 			Source = source;
 			Read = read;

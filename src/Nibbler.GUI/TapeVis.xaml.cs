@@ -11,8 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TuringBox.Tapes;
-using TuringBox.TM.Run;
+using Nibbler.Core.Macro.Tapes;
+using Nibbler.Core.Simple.Run;
 
 namespace BeaverUI
 {

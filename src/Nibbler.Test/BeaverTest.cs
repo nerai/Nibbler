@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Nibbler.Core.Macro.Definition;
+using Nibbler.Core.Macro.Run;
+using Nibbler.Core.Macro.Tapes;
+using Nibbler.Core.Simple.Definition;
 using Nibbler.Core.Simple.Run;
-using TuringBox.Tapes;
-using TuringBox.TM;
-using TuringBox.TM.Run;
 
 namespace TuringTest
 {

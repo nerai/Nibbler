@@ -9,15 +9,11 @@ using System.Linq;
 using System.Text;
 using Nibbler.Core.Simple;
 using Nibbler.Core.Simple.Run;
-using TuringBox.Tapes;
-using TuringBox.TM;
-using TuringBox.TM.Run;
-using TuringBox.Utils;
+using Nibbler.Core.Simple.Tapes;
+using Nibbler.Utils.BasicDataStructures;
 using Unlog;
-using Utils;
-using Utils.BasicDataStructures;
 
-namespace TuringBox.Tapes
+namespace Nibbler.Core.Macro.Tapes
 {
 	public class PackedExponentTape : ITape, ICloneable
 	{

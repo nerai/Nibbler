@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Nibbler.Core.Simple
+namespace Nibbler.Core.Simple.Tapes
 {
 	public enum HeadPosition
 	{

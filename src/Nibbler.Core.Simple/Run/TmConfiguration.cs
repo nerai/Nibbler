@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Nibbler.Core.Simple;
+using Nibbler.Core.Simple.Definition;
+using Nibbler.Core.Simple.Tapes;
 
-namespace TuringBox.TM.Run
+namespace Nibbler.Core.Simple.Run
 {
 	public class TmConfiguration<TTape>
 		where TTape : class, ITape

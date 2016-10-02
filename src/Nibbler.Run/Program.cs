@@ -4,12 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using Nibbler.Core.Simple;
-using TuringBox.Tapes;
-using TuringBox.TM;
-using TuringBox.TM.Run;
 using Unlog;
 
-namespace TuringRunner
+namespace Nibbler.Run
 {
 	class Program
 	{

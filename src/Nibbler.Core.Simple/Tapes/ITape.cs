@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TuringBox.TM.Run;
 
-namespace Nibbler.Core.Simple
+namespace Nibbler.Core.Simple.Tapes
 {
 	public interface ITape
 	{

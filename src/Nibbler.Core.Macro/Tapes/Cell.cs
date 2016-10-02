@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Nibbler.Core.Simple.Run;
-using TuringBox.TM.Run;
-using TuringBox.Utils;
-using Utils.BasicDataStructures;
+using Nibbler.Utils.BasicDataStructures;
 
-namespace TuringBox.Tapes
+namespace Nibbler.Core.Macro.Tapes
 {
 	public class Cell : LinkedListNode2<Cell>
 	{

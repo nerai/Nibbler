@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using Nibbler.Core.Macro.Definition;
+using Nibbler.Core.Macro.Tapes;
+using Nibbler.Core.Simple.Definition;
 using Nibbler.Core.Simple.Run;
-using TuringBox.Tapes;
-using TuringBox.Utils;
 using Unlog;
 
-namespace TuringBox.TM.Run
+namespace Nibbler.Core.Macro.Run
 {
 	public class MmRun : TmRunBase<PackedExponentTape>
 	{

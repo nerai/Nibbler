@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Nibbler.Core.Simple.Run;
-using TuringBox.TM.Run;
 
-namespace Nibbler.Core.Simple
+namespace Nibbler.Core.Simple.Tapes
 {
 	public class BasicTape : ISimpleTape
 	{

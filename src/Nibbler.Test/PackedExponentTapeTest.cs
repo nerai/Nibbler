@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TuringBox.Tapes;
+using Nibbler.Core.Macro.Tapes;
 
 namespace TuringTest
 {

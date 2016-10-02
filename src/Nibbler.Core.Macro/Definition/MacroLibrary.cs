@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Utils;
+using Nibbler.Core.Simple.Definition;
+using Nibbler.Utils;
 
-namespace TuringBox.TM
+namespace Nibbler.Core.Macro.Definition
 {
 	public class MacroLibrary
 	{
@@ -23,7 +24,8 @@ namespace TuringBox.TM
 
 		public void LearnMacro (MacroTransition t)
 		{
-			if (t == null) throw new ArgumentNullException ();
+			if (t == null)
+				throw new ArgumentNullException ();
 
 			var store = t.StartFacingRight ? _MacroDeltaR : _MacroDeltaL;
 			store.Add (t.Source, t.Read, t);

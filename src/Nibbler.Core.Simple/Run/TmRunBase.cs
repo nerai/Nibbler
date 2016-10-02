@@ -4,10 +4,12 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using Nibbler.Core.Simple;
+using Nibbler.Core.Simple.Definition;
 using Nibbler.Core.Simple.Run;
+using Nibbler.Core.Simple.Tapes;
 using Unlog;
 
-namespace TuringBox.TM.Run
+namespace Nibbler.Core.Simple.Run
 {
 	public interface ITmRunBase
 	{

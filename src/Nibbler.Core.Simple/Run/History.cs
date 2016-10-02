@@ -4,10 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using Nibbler.Core.Simple;
-using TuringBox.TM;
-using TuringBox.TM.Run;
+using Nibbler.Core.Simple.Definition;
+using Nibbler.Core.Simple.Tapes;
 
-namespace TuringBox.TM.Run
+namespace Nibbler.Core.Simple.Run
 {
 	public class History<TTape>
 		where TTape : class, ITape

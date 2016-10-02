@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 using Nibbler.Core.Simple.Definition;
 using Unlog;
 
-namespace TuringBox.TM
+namespace Nibbler.Core.Simple.Definition
 {
 	public class DefinitionLibrary
 	{

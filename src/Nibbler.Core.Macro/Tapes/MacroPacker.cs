@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-namespace TuringBox.Tapes
+namespace Nibbler.Core.Macro.Tapes
 {
 	public class MacroPacker
 	{

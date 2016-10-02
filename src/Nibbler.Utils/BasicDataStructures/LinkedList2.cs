@@ -1,4 +1,4 @@
-﻿namespace Utils.BasicDataStructures
+﻿namespace Nibbler.Utils.BasicDataStructures
 {
 	using System;
 	using System.Collections.Generic;
@@ -244,8 +244,7 @@
 
 		object System.Collections.ICollection.SyncRoot
 		{
-			get
-			{
+			get {
 				if (_syncRoot == null) {
 					System.Threading.Interlocked.CompareExchange<Object> (ref _syncRoot, new Object (), null);
 				}
@@ -317,8 +316,7 @@
 
 			object System.Collections.IEnumerator.Current
 			{
-				get
-				{
+				get {
 					if (index == 0 || (index == list.Count + 1)) {
 						throw new InvalidOperationException ("InvalidOperation_EnumOpCantHappen");
 					}

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Nibbler.Core.Simple.Definition;
 using Unlog;
 
-namespace TuringBox.TM.Run
+namespace Nibbler.Core.Simple.Run
 {
 	public class TmRunResult
 	{

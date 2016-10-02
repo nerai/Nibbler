@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TuringBox.TM
+namespace Nibbler.Core.Simple.Definition
 {
 	public class State
 	{
@@ -14,7 +14,8 @@ namespace TuringBox.TM
 
 		public State (int id, string name, SimpleTransition[] ts)
 		{
-			if (id < 0 || id >= 255) throw new ArgumentOutOfRangeException ();
+			if (id < 0 || id >= 255)
+				throw new ArgumentOutOfRangeException ();
 
 			Id = id;
 			Name = name;
