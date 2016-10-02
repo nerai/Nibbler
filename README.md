@@ -30,22 +30,107 @@ The program itself includes the same information. An overview of all commands ca
 For convenience, the program allows abbreviating commands. As long as the entered command is uniquely identifiable, there is no need to spell out all words. For instance, `pr t a` is automatically expanded to `print trans all`.
 
 ### def – load, change or display TM definitions
-todo
+Syntax: `def [k x | d]`
+
+`def d` loads definition `d`, overwriting the current definition.
+
+`def k x` changes the macro size of the loaded TM to `x`. `x` must be a positive integer between 1 and 8.
+
+The command without argument displays the definition of the currently loaded TM.
+
+	$ def 1RA 1RH
+	Loaded definition: 1RA 1RH,
+	$ def k 2
+	Macro sized changed: 1RA 1RH, K = 2
+	$ def
+	1RA 1RH, K = 2
 
 ### lib – load or display TM definitions from the library
-todo
+Syntax: `lib [name]`
+
+Loads the specified TM definition `name` from the library, or displays all available definitions.
+
+	$ lib
+	BusyBeaver2         1RB 1LB, 1LA 1RH, K = 1
+	BusyBeaver3         1RB 1RH, 0RC 1RB, 1LC 1LA, K = 1
+
+	$ lib beaver 2
+	Loading BusyBeaver2
 
 ### create – instantiate a TM
-todo
+Syntax: `create [nohist] [silent]`
+
+Instantiates a new TM from the currently loaded TM definition.
+
+If option `nohist` is given, no history is created, disabling nontermination proofs by repetition.
+If `silent` is specified, step and transition output is disabled.
+
+	$ def 1RA 1RH
+	Loaded definition: 1RA 1RH,
+	$ create
+	Selected machine: 1RA 1RH,
 
 ### print – change output options
-todo
+Syntax: `print steps [show|hide]`
+or `print trans [all|ctr|none]`
+
+The `print` commands changes which configurations and transitions are displayed.
+
+To display both the tape and the transitions:
+
+	$ print steps show
+	$ print trans all
+
+To hide all regular output:
+
+	$ print steps hide
+	$ print trans none
 
 ### step – perform a number of steps in the simulation
-todo
+Syntax: `step n`
+
+Lets the currently selected TM run for `n` steps. A step is either a basic transition or a single whole block operation, if enabled.
+
+	$ lib simple tree
+	Loading SimpleChristmasTree
+	$ create
+	Selected machine: 1RB 1LA, 1LA 1RC, 1RH 1RB,
+	$ print steps hide
+	$ step 8
+	A>0 => 1 B> (1s)
+	B>0 => <A 1 (1s)
+	1<A => <A 1 (1s)x1
+	0<A => 1 B> (1s)
+	B>1 => 1 C> (1s)
+	C>1 => 1 B> (1s)
+	B>0 => <A 1 (1s)
+	1<A => <A 1 (1s)x3
 
 ### run – run the simulation
-todo
+Syntax: `run [s]`
+
+Simulates the machine until it halts. If an argument `s` is given, the machine stops once its shift count is at least `s`.
+
+Example of running until a machine halts:
+
+	$ lib mabu 2
+	Loading BusyBeaver5_Mabu2
+	$ create silent
+	Selected machine: 1LB 1LA, 1RC 1RB, 1LA 1RD, 1LA 1RE, 1RH 0RC, K=3
+	$ run
+	Result of 1LB 1LA, 1RC 1RB, 1LA 1RD, 1LA 1RE, 1RH 0RC, K=3: HALTING WITH REJECT after 11798826 shifts. 4098 symbols on tape. Tape: 11798826~ 011 101^2047 110
+
+Example of running up to a certain number of shifts (note that due to preceding block operations, slightly more shifts may be performed than specified):
+
+	$ lib mabu 1
+	Loading BusyBeaver5_Mabu1
+	$ create silent
+	Selected machine: 1LB 1RC, 1LC 1LB, 1LD 0RE, 1RA 1RD, 1LH 0RA, K=3
+	$ run 100000
+	$ print steps show
+	$ step 1
+	100304~ 110 010^188 E> 100
+	100307~ 110 010^188 <C 110
 
 ### Additional commands
 Additional commands, mostly related to automation and batch processing, include:
