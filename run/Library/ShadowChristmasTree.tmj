@@ -1,0 +1,83 @@
+﻿{
+  "OriginalDefinition": "A, B, C, D; H; ; 0,1; \nA,0 -> 1,R,B;\nA,1 -> 1,L,A;\nB,0 -> 0,L,A;\nB,1 -> 0,R,C;\nC,0 -> 1,R,D;\nC,1 -> 1,R,C;\nD,0 -> 0,R,B;\nD,1 -> 1,R,H;\n /*Shadow Christmas tree from Machlin/Stout Complex Behaviour p.95\n*/;",
+  "NonfinalStates": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "AcceptingState": "H",
+  "RefusingState": null,
+  "InitialState": "A",
+  "Sigma": [],
+  "Gamma": [
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "A",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "A",
+      "Read": "1",
+      "To": "A",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "0",
+      "To": "A",
+      "Write": "0",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "1",
+      "To": "C",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "0",
+      "To": "D",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "1",
+      "To": "C",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "D",
+      "Read": "0",
+      "To": "B",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "D",
+      "Read": "1",
+      "To": "H",
+      "Write": "1",
+      "Dir": "R"
+    }
+  ],
+  "Info_Name": "ShadowChristmasTree",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [
+    "Shadow Christmas tree from Machlin/Stout Complex Behaviour p.95",
+    ""
+  ],
+  "Info_Url": null,
+  "SuggestedMacroSize": null
+}

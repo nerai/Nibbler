@@ -1,0 +1,82 @@
+﻿{
+  "OriginalDefinition": "A, B, C, D; H; ; 0, 1;A,0 -> B,1,R;A,1 -> A,1,L;B,0 -> A,1,L;B,1 -> C,0,R;C,0 -> B,1,R;C,1 -> D,0,L;D,0 -> C,1,R;D,1 -> H,1,R;/*Best sigma=19 shifts=332332~ 001111 111111 H>011110 111110This would be better than a proven record, so the computation has to be wrong.*/",
+  "NonfinalStates": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "AcceptingState": "H",
+  "RefusingState": null,
+  "InitialState": "A",
+  "Sigma": [],
+  "Gamma": [
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "A",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "A",
+      "Read": "1",
+      "To": "A",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "0",
+      "To": "A",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "1",
+      "To": "C",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "1",
+      "To": "D",
+      "Write": "0",
+      "Dir": "L"
+    },
+    {
+      "From": "D",
+      "Read": "0",
+      "To": "C",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "D",
+      "Read": "1",
+      "To": "H",
+      "Write": "1",
+      "Dir": "R"
+    }
+  ],
+  "Info_Name": "InvalidComputation01",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [
+    "Best sigma=19 shifts=332332~ 001111 111111 H>011110 111110This would be better than a proven record, so the computation has to be wrong."
+  ],
+  "Info_Url": null,
+  "SuggestedMacroSize": null
+}

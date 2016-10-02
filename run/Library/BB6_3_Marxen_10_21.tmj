@@ -1,0 +1,110 @@
+﻿{
+  "OriginalDefinition": "A, B, C, D, E, F; H; ; 0,1; \nA,0 -> B,1,R;\nA,1 -> C,0,R;\nB,0 -> A,0,L;\nB,1 -> D,0,R;\nC,0 -> D,1,R;\nC,1 -> H,1,R;\nD,0 -> E,1,L;\nD,1 -> D,0,L;\nE,0 -> F,1,R;\nE,1 -> B,1,L;\nF,0 -> A,1,R;\nF,1 -> E,1,R;\n K=2;",
+  "NonfinalStates": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+  ],
+  "AcceptingState": "H",
+  "RefusingState": null,
+  "InitialState": "A",
+  "Sigma": [],
+  "Gamma": [
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "A",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "A",
+      "Read": "1",
+      "To": "C",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "B",
+      "Read": "0",
+      "To": "A",
+      "Write": "0",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "1",
+      "To": "D",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "0",
+      "To": "D",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "1",
+      "To": "H",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "D",
+      "Read": "0",
+      "To": "E",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "D",
+      "Read": "1",
+      "To": "D",
+      "Write": "0",
+      "Dir": "L"
+    },
+    {
+      "From": "E",
+      "Read": "0",
+      "To": "F",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "E",
+      "Read": "1",
+      "To": "B",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "F",
+      "Read": "0",
+      "To": "A",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "F",
+      "Read": "1",
+      "To": "E",
+      "Write": "1",
+      "Dir": "R"
+    }
+  ],
+  "Info_Name": "BB6_3_Marxen_10_21",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [],
+  "Info_Url": null,
+  "SuggestedMacroSize": 2
+}

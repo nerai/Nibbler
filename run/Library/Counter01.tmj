@@ -1,0 +1,67 @@
+﻿{
+  "OriginalDefinition": "A, B, C; H; ; 0,1; \nA,0 -> B,1,R;\nA,1 -> C,0,L;\nB,0 -> A,0,L;\nB,1 -> A,1,R;\nC,0 -> A,1,L;\nC,1 -> A,0,R;\n ;/* Counter, found while enumerating BB4.*/;",
+  "NonfinalStates": [
+    "A",
+    "B",
+    "C"
+  ],
+  "AcceptingState": "H",
+  "RefusingState": null,
+  "InitialState": "A",
+  "Sigma": [],
+  "Gamma": [
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "A",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "A",
+      "Read": "1",
+      "To": "C",
+      "Write": "0",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "0",
+      "To": "A",
+      "Write": "0",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "1",
+      "To": "A",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "0",
+      "To": "A",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "C",
+      "Read": "1",
+      "To": "A",
+      "Write": "0",
+      "Dir": "R"
+    }
+  ],
+  "Info_Name": "Counter01",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [
+    " Counter, found while enumerating BB4."
+  ],
+  "Info_Url": null,
+  "SuggestedMacroSize": null
+}

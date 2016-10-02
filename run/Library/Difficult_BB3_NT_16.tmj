@@ -1,0 +1,58 @@
+﻿{
+  "OriginalDefinition": "A, B, C; H; ; 0,1; \nA,0 -> 1,R,B;\nA,1 -> 1,L,C;\nB,0 -> 0,L,A;\nB,1 -> 0,R,B;\nC,0 -> 1,L,A;\n",
+  "NonfinalStates": [
+    "A",
+    "B",
+    "C"
+  ],
+  "AcceptingState": "H",
+  "RefusingState": null,
+  "InitialState": "A",
+  "Sigma": [],
+  "Gamma": [
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "A",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "A",
+      "Read": "1",
+      "To": "C",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "0",
+      "To": "A",
+      "Write": "0",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "1",
+      "To": "B",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "0",
+      "To": "A",
+      "Write": "1",
+      "Dir": "L"
+    }
+  ],
+  "Info_Name": "Difficult_BB3_NT_16",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [],
+  "Info_Url": null,
+  "SuggestedMacroSize": null
+}

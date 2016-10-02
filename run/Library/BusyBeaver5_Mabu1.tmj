@@ -1,0 +1,100 @@
+﻿{
+  "OriginalDefinition": "A,B,C,D,E;H;;0,1;A,0 -> B,1,L;A,1 -> C,1,R;B,0 -> C,1,L;B,1 -> B,1,L;C,0 -> D,1,L;C,1 -> E,0,R;D,0 -> A,1,R;D,1 -> D,1,R;E,0 -> H,1,L;E,1 -> A,0,R;K=3;/*current 5-state, 2-symbol best contender (possible busy beaver)\nResult: 4098 1s with 8191 0s interspersed in 47176870 steps\nIsomorph: 5-state TM #1 from MaBu-List\nResult: 110 010^4095 <H 100*/",
+  "NonfinalStates": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "AcceptingState": "H",
+  "RefusingState": null,
+  "InitialState": "A",
+  "Sigma": [],
+  "Gamma": [
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "A",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "A",
+      "Read": "1",
+      "To": "C",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "B",
+      "Read": "0",
+      "To": "C",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "1",
+      "To": "B",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "C",
+      "Read": "0",
+      "To": "D",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "C",
+      "Read": "1",
+      "To": "E",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "D",
+      "Read": "0",
+      "To": "A",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "D",
+      "Read": "1",
+      "To": "D",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "E",
+      "Read": "0",
+      "To": "H",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "E",
+      "Read": "1",
+      "To": "A",
+      "Write": "0",
+      "Dir": "R"
+    }
+  ],
+  "Info_Name": "BusyBeaver5_Mabu1",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [
+    "current 5-state, 2-symbol best contender (possible busy beaver)",
+    "Result: 4098 1s with 8191 0s interspersed in 47176870 steps",
+    "Isomorph: 5-state TM #1 from MaBu-List",
+    "Result: 110 010^4095 <H 100"
+  ],
+  "Info_Url": null,
+  "SuggestedMacroSize": 3
+}

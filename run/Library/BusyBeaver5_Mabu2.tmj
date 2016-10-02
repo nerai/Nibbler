@@ -1,0 +1,100 @@
+﻿{
+  "OriginalDefinition": "A,B,C,D,E;H;;0,1;A,0 -> B,1,L;A,1 -> A,1,L;B,0 -> C,1,R;B,1 -> B,1,R;C,0 -> A,1,L;C,1 -> D,1,R;D,0 -> A,1,L;D,1 -> E,1,R;E,0 -> H,1,R;E,1 -> C,0,R;K=3;/*5-state TM #2 from MaBu-List\nComment: This TM produces 4098 ones in 11798826 steps.\nResult: 011 101^2047 11 H> 0\n*/",
+  "NonfinalStates": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "AcceptingState": "H",
+  "RefusingState": null,
+  "InitialState": "A",
+  "Sigma": [],
+  "Gamma": [
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "A",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "A",
+      "Read": "1",
+      "To": "A",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "B",
+      "Read": "0",
+      "To": "C",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "B",
+      "Read": "1",
+      "To": "B",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "0",
+      "To": "A",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "C",
+      "Read": "1",
+      "To": "D",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "D",
+      "Read": "0",
+      "To": "A",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "D",
+      "Read": "1",
+      "To": "E",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "E",
+      "Read": "0",
+      "To": "H",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "E",
+      "Read": "1",
+      "To": "C",
+      "Write": "0",
+      "Dir": "R"
+    }
+  ],
+  "Info_Name": "BusyBeaver5_Mabu2",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [
+    "5-state TM #2 from MaBu-List",
+    "Comment: This TM produces 4098 ones in 11798826 steps.",
+    "Result: 011 101^2047 11 H> 0",
+    ""
+  ],
+  "Info_Url": null,
+  "SuggestedMacroSize": 3
+}

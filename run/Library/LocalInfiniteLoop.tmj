@@ -1,0 +1,82 @@
+﻿{
+  "OriginalDefinition": "A, B, C, D; H; ; 0,1; \nA,0 -> 1,L,B;\nA,1 -> 1,R,A;\nB,0 -> 0,R,A;\nB,1 -> 1,L,C;\nC,0 -> 0,R,A;\nC,1 -> 1,L,D;\nD,0 -> 0,R,C;\nD,1 -> 1,R,H;\n /*Found by myself while enumerating BB4.*/;",
+  "NonfinalStates": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "AcceptingState": "H",
+  "RefusingState": null,
+  "InitialState": "A",
+  "Sigma": [],
+  "Gamma": [
+    "0",
+    "1"
+  ],
+  "Delta": [
+    {
+      "From": "A",
+      "Read": "0",
+      "To": "B",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "A",
+      "Read": "1",
+      "To": "A",
+      "Write": "1",
+      "Dir": "R"
+    },
+    {
+      "From": "B",
+      "Read": "0",
+      "To": "A",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "B",
+      "Read": "1",
+      "To": "C",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "C",
+      "Read": "0",
+      "To": "A",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "C",
+      "Read": "1",
+      "To": "D",
+      "Write": "1",
+      "Dir": "L"
+    },
+    {
+      "From": "D",
+      "Read": "0",
+      "To": "C",
+      "Write": "0",
+      "Dir": "R"
+    },
+    {
+      "From": "D",
+      "Read": "1",
+      "To": "H",
+      "Write": "1",
+      "Dir": "R"
+    }
+  ],
+  "Info_Name": "LocalInfiniteLoop",
+  "Info_ExpectedResult": null,
+  "Info_Comment": [
+    "Found by myself while enumerating BB4."
+  ],
+  "Info_Url": null,
+  "SuggestedMacroSize": null
+}
