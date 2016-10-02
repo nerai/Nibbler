@@ -9,8 +9,8 @@
     <ProjectGuid>{E219ACFC-608B-4093-B552-7FF17F1271B2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TuringTest</RootNamespace>
-    <AssemblyName>TuringTest</AssemblyName>
+    <RootNamespace>Nibbler.Test</RootNamespace>
+    <AssemblyName>Nibbler.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

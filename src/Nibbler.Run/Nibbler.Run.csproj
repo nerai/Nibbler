@@ -8,8 +8,8 @@
     <ProjectGuid>{FD285C87-F13B-4A4E-B633-4436A80FDC8B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TuringRunner</RootNamespace>
-    <AssemblyName>TuringRunner</AssemblyName>
+    <RootNamespace>Nibbler.Run</RootNamespace>
+    <AssemblyName>Nibbler.Run</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>

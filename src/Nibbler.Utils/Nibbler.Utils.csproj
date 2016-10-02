@@ -8,8 +8,8 @@
     <ProjectGuid>{1E3A7ECC-FCA5-4921-8ADF-39AAB495B20A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Utils</RootNamespace>
-    <AssemblyName>Utils</AssemblyName>
+    <RootNamespace>Nibbler.Utils</RootNamespace>
+    <AssemblyName>Nibbler.Utils</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

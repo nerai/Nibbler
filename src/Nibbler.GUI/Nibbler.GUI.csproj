@@ -8,8 +8,8 @@
     <ProjectGuid>{01F15FE2-C5DE-430E-A17B-A900B4A52712}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BeaverUI</RootNamespace>
-    <AssemblyName>BeaverUI</AssemblyName>
+    <RootNamespace>Nibbler.GUI</RootNamespace>
+    <AssemblyName>Nibbler.GUI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -131,10 +131,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Example Log Viewer\LogViewer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -145,10 +141,6 @@
     </Compile>
     <Compile Include="CellVis.xaml.cs">
       <DependentUpon>CellVis.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Example Log Viewer\LogEntry.cs" />
-    <Compile Include="Example Log Viewer\LogViewer.xaml.cs">
-      <DependentUpon>LogViewer.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
