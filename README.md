@@ -144,5 +144,5 @@ Additional commands, mostly related to automation and batch processing, include:
 * `stopwatch`: Measures time difference
 
 ## Included TM library
-The library provided by the program, accessible via the ‘lib’ command, contains over 30 machines, including all known and conjectured Busy Beavers. These machines are stored in a newly developed JSON format.
+The library provided by the program, accessible via the `lib` command, contains over 30 machines, including all known and conjectured Busy Beavers. These machines are stored in a newly developed JSON format.
 
