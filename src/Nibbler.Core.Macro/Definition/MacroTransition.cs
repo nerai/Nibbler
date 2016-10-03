@@ -88,14 +88,22 @@ namespace Nibbler.Core.Macro.Definition
 
 			var headPos = StartFacingRight ? 0 : _WriteUnpacked.Length - 1;
 			var unpacked = _ReadUnpacked.Select (convertSingle).ToArray ();
-			sb.Append (TapeUtil.WriteHeadCell (StartFacingRight, unpacked, headPos, Source.ToString ()));
+			sb.Append (TapeUtil.WriteHeadCell (
+				StartFacingRight,
+				unpacked,
+				headPos,
+				Source.ToString ()));
 
 			sb.Append (" => ");
 
 			if (Next != null) {
 				headPos += Direction;
 				unpacked = _WriteUnpacked.Select (convertSingle).ToArray ();
-				sb.Append (TapeUtil.WriteHeadCell (EndFacingRight.Value, unpacked, headPos, Next.ToString ()));
+				sb.Append (TapeUtil.WriteHeadCell (
+					EndFacingRight ?? true,
+					unpacked,
+					headPos,
+					Next.ToString ()));
 			}
 			else {
 				sb.Append ("[INFTY]");
