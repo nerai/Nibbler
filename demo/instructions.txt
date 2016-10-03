@@ -1,0 +1,85 @@
+
+
+1. Load and run a known, small Busy Beaver
+
+$ lib beaver 2
+Loading BusyBeaver2         <----- Notice name resolution. Type "lib" for all known machines.
+
+$ create
+Selected machine: 1RB 1LB, 1LA 1RH, K=1      <----- Macro size predefined, could change it via "def k 2".
+
+$ run
+0~ A>                <----- initial, empty tape
+A>0 => 1 B> (1s)     <----- first transition, takes "1s" (1 shift)
+1~ 1 B>              <----- tape after first transition
+B>0 => <A 1 (1s)
+2~ 1 <A 1
+1<A => <B 1 (1s)
+3~ <B 1^2
+0<B => <A 1 (1s)
+4~ <A 1^3
+0<A => 1 B> (1s)
+5~ 1 B> 1^3
+B>1 => 1 H> (1s)
+6~ 1^2 H> 1^2
+Result of 1RB 1LB, 1LA 1RH, K=1: HALTING WITH REJECT after 6 shifts. 4 symbols on tape. Tape: 6~ 1^2 H> 1^2
+6~ 1^2 H> 1^2
+
+
+
+
+2. Run a Busy Beaver candidate
+
+$ lib mabu1
+Loading BusyBeaver5_Mabu1
+
+$ def      <----- Check if correct macro size is already set up in the library definition
+1LB 1RC, 1LC 1LB, 1LD 0RE, 1RA 1RD, 1LH 0RA, K=3
+
+$ create silent nohist         <----- Option silent because it has 47 million shifts
+Selected machine: 1LB 1RC, 1LC 1LB, 1LD 0RE, 1RA 1RD, 1LH 0RA, K=3; Options: silent nohist
+
+$ run        <----- Will only print result thanks to silent mode
+Result of 1LB 1RC, 1LC 1LB, 1LD 0RE, 1RA 1RD, 1LH 0RA, K=3: HALTING WITH REJECT after 47176870 shifts. 4098 symbols on tape. Tape: 47176870~ 110 010^4095 <H 100
+
+
+
+
+3. Manually step through a simulation
+
+$ lib kro 18      <----- Let's have a look at the current best candidate
+Loading BB6_8_Kropitz_10E18267
+
+$ create
+Selected machine: 1RB 1LE, 1RC 1RF, 1LD 0RB, 1RE 0LC, 1LA 0RD, 1RH 1RC, K=6
+
+$ run 30     <----- Run machine until at least 30 shifts have been done.
+0~ A>
+A>000000 => <D 101010 (13s)
+13~ <D 101010
+000000<D => 000001 E> (1s)
+14~ 000001 E> 101010
+E>101010 => 010101 E> (6s)x1
+20~ 000001 010101 E>
+E>000000 => <A 100000 (1s)
+21~ 000001 010101 <A 100000
+010101<A => <A 111111 (6s)x1
+27~ 000001 <A 111111 100000
+000001<A => 000111 C> (5s)
+32~ 000111 C> 111111 100000
+32~ 000111 C> 111111 100000
+
+$ step        <----- Perform 1 step
+32~ 000111 C> 111111 100000       <----- Previous tape
+C>111111 => 011011 C> (6s)x1
+38~ 000111 011011 C> 100000       <----- Tape after single step
+
+$ print trans none       <----- Turn off transition printing
+
+$ step 4        <----- Perform exactly 4 steps
+38~ 000111 011011 C> 100000
+43~ 000111 011011 <D 101000
+46~ 000111 011001 C> 101000
+55~ 000111 011001 <D 101010
+60~ 000111 011101 E> 101010
+
