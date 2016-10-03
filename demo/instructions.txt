@@ -83,3 +83,43 @@ $ step 4        <----- Perform exactly 4 steps
 55~ 000111 011001 <D 101010
 60~ 000111 011101 E> 101010
 
+
+
+
+4. Simple NT detection
+
+$ lib local inf
+Loading LocalInfiniteLoop
+
+$ create
+Selected machine: 1LB 1RA, 0RA 1LC, 0RA 1LD, 0RC 1RH,
+
+$ run
+0~ A>
+A>0 => <B 1 (1s)
+1~ <B 1
+0<B => 0 A> (1s)
+2~ A> 1
+A>1 => 1 A> (1s)x1
+3~ 1 A>
+A>0 => <B 1 (1s)
+4~ 1 <B 1
+1<B => <C 1 (1s)
+5~ <C 1^2
+0<C => 0 A> (1s)
+6~ A> 1^2
+A>1 => 1 A> (1s)x2
+8~ 1^2 A>
+A>0 => <B 1 (1s)
+9~ 1^2 <B 1
+1<B => <C 1 (1s)
+10~ 1 <C 1^2
+1<C => <D 1 (1s)
+11~ <D 1^3
+0<D => 0 C> (1s)
+12~ C> 1^3
+C>1 => <D 1 (1s)
+13~ <D 1^3
+Result of 1LB 1RA, 0RA 1LC, 0RA 1LD, 0RC 1RH,: PROVEN NON-HALTING after 13 shifts. Equivalent configuration to 13~ <D 1^3 already present: 11~ <D 1^3 Tape: 13~ <D 1^3
+13~ <D 1^3
+
