@@ -1,3 +1,3 @@
 @echo off
 cd run
-start "Nibbler GUI" BeaverUI.exe
+start "Nibbler GUI" Nibbler.GUI.exe

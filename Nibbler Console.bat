@@ -1,3 +1,3 @@
 @echo off
 cd run
-start "Nibbler" TuringRunner.exe
+start "Nibbler" Nibbler.Run.exe
