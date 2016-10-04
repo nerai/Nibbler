@@ -10,8 +10,6 @@ namespace Nibbler.Run
 {
 	class Program
 	{
-		public static readonly string Version;
-
 		static Program ()
 		{
 			/*
@@ -20,24 +18,13 @@ namespace Nibbler.Run
 			Unlog.FileLogTarget.ConvertAllFilesToHTML ();
 			Log.AllowAsynchronousWriting = false;
 			Log.AddDefaultFileTarget ();
-
-			/*
-			 * Find build stamp (crude hack)
-			 */
-			var exe = typeof (Program).Assembly.ManifestModule.FullyQualifiedName;
-			var stamp = File.GetLastWriteTimeUtc (exe);
-			var id = stamp.Subtract (new DateTime (2014, 10, 26)).TotalDays;
-			Version = "Nibbler Build A" + id.ToString ("0");
-			Version += " (" + stamp.ToString ("yyyy.MM.dd HH.mm") + ")";
-			Version += " (c) Sebastian Heuchler";
 		}
 
 		static void Main (string[] args)
 		{
 			if (!Environment.Is64BitProcess) {
-				Log.WriteLine ("WARNING: Running as 32 bit process. May crash on low memory.");
+				Log.WriteLine ("Running as 32 bit process.");
 			}
-			Log.WriteLine (Version);
 
 			var cr = new ControlledRun (false);
 			cr.Run ();
