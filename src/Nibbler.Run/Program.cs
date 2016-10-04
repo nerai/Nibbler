@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using Nibbler.Core.Simple;
 using Unlog;
 
@@ -15,7 +16,10 @@ namespace Nibbler.Run
 			/*
 			 * Set up logging
 			 */
-			Unlog.FileLogTarget.ConvertAllFilesToHTML ();
+			new Thread (() => Unlog.FileLogTarget.ConvertAllFilesToHTML ()) {
+				Name = "Convert log files to HTML",
+				IsBackground = true,
+			}.Start ();
 			Log.AllowAsynchronousWriting = false;
 			Log.AddDefaultFileTarget ();
 		}

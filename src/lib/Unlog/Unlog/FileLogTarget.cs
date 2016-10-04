@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using Unlog.Util;
 
 namespace Unlog
@@ -60,10 +61,24 @@ namespace Unlog
 
 		public static void ConvertToHTML (string source, string dest)
 		{
-			var lines = File.ReadAllLines (source);
+			string[] lines;
+			for (;;) {
+				try {
+					lines = File.ReadAllLines (source);
+					break;
+				}
+				catch (IOException) {
+					Thread.Sleep (100);
+				}
+			}
 
 			// TODO: This is Sparta
-			using (var sw = new StreamWriter (File.Open (dest, FileMode.CreateNew, FileAccess.Write, FileShare.Read), Encoding.UTF8)) {
+			using (var file = File.Open (
+					dest,
+					FileMode.OpenOrCreate,
+					FileAccess.Write,
+					FileShare.Read))
+			using (var sw = new StreamWriter (file, Encoding.UTF8)) {
 				sw.WriteLine ("<!DOCTYPE HTML>");
 				sw.WriteLine ("<HTML>");
 				sw.WriteLine ();
@@ -110,9 +125,9 @@ namespace Unlog
 			}
 		}
 
-        public void Dispose ()
-        {
-            outF.Dispose ();
-        }
-    }
+		public void Dispose ()
+		{
+			outF.Dispose ();
+		}
+	}
 }
