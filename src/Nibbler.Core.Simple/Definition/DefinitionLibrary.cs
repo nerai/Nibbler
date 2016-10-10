@@ -96,7 +96,7 @@ namespace Nibbler.Core.Simple.Definition
 
 		public static string GetDefinitionByName (string name)
 		{
-			var sel = ExampleMenu.Util.LooseSelect (
+			var sel = ExampleMenu.Examples.Recording.LooseSelectUtil.LooseSelect (
 				AllDefinitionNames (),
 				name,
 				StringComparison.InvariantCultureIgnoreCase);

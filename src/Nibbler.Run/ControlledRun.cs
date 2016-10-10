@@ -29,7 +29,7 @@ namespace Nibbler.Run
 			menu.CQ.ImmediateInput (s);
 		}
 
-		private readonly CMenu menu = new CMenu ();
+		private readonly CMenu menu;
 
 		private class Menu_Print : CMenuItem
 		{
@@ -401,6 +401,14 @@ namespace Nibbler.Run
 
 		public ControlledRun (bool passive)
 		{
+			menu = new CMenu ();
+
+			menu.Write += Log.Write;
+			menu.WriteLine += Log.WriteLine;
+			menu.SetForegroundColor += c => Log.ForegroundColor = c;
+			menu.SetBackgroundColor += c => Log.BackgroundColor = c;
+			menu.ResetColor += Log.ResetColor;
+
 			menu.CQ.PassiveMode = passive;
 
 			menu.Add (new Menu_Print (this));
